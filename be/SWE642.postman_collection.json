@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "5aaad6f4-748f-45b8-972d-c38e1213cc26",
+		"name": "SWE642",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getStudent with ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getStudent?id=456123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getStudent"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "456123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllStudents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/getAllStudents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAllStudents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addStudent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"studentBean\": {\r\n    \"studentid\": \"456123\",\r\n    \"firstname\": \"Deep\",\r\n    \"lastname\": \"Kumar\",\r\n    \"email\": \"deep@gmail.com\",\r\n    \"phone\": \"9090909090\",\r\n    \"url\": \"abc.com\",\r\n    \"address\": \"Bob Court\",\r\n    \"zipcode\": \"22030\",\r\n    \"city\": \"Fairfax\",\r\n    \"state\": \"Virginia\",\r\n    \"comments\": \"Good college\"\r\n  },\r\n  \"data\": \"1,2,3,4,5,6,7,8,9,5\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/addStudent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addStudent"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
